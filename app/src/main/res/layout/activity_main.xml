@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!--    toolbar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin2"
+            android:layout_marginRight="@dimen/margin2"
+            android:layout_marginBottom="@dimen/margin2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12sp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cart"
+                        android:textColor="#005678"
+                        android:textSize="27sp"
+                        app:fontFamily="@font/alata" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 items"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/alata" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivBizzCoin"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignTop="@+id/ivWishlist"
+                        android:layout_alignBottom="@+id/ivWishlist"
+                        android:layout_gravity="center"
+                        android:layout_toStartOf="@+id/ivWishlist"
+                        android:layout_toLeftOf="@+id/ivWishlist"
+                        android:src="@drawable/ic_bizz" />
+
+                    <ImageView
+                        android:id="@+id/ivWishlist"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:src="@drawable/ic_favourite" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--    deliver to location-->
+    <RelativeLayout
+        android:id="@+id/rlLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBar"
+        android:background="#D2F0F3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/margin3"
+            android:layout_marginLeft="@dimen/margin3"
+            android:layout_marginTop="@dimen/margin2"
+            android:layout_marginEnd="@dimen/margin2"
+            android:layout_marginRight="@dimen/margin2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignLeft="@+id/toolBar"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_location" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12sp"
+                android:gravity="center"
+                android:text="Deliver to Gurgaon 122001"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:fontFamily="@font/alata" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="12sp"
+                    android:gravity="center"
+                    android:text="Change"
+                    android:textColor="#005779"
+                    android:textSize="17sp"
+                    app:fontFamily="@font/alata" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--    cart customer-->
+    <RelativeLayout
+        android:id="@+id/rlCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlLocation"
+        android:layout_marginTop="@dimen/margin2"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/margin2"
+            android:layout_marginLeft="@dimen/margin2"
+            android:layout_marginEnd="@dimen/margin2"
+            android:layout_marginRight="@dimen/margin2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_cart" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cart"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:fontFamily="@font/alata" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="9dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Delivery Address"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="9dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Billing Address"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="9dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="9dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--    510 savings-->
+    <LinearLayout
+        android:id="@+id/rlSavings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlCart"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin2"
+        android:background="#EFFBF0"
+        android:gravity="center">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="12sp"
+            android:gravity="center"
+            android:padding="@dimen/margin1"
+            android:text="₹510"
+            android:textColor="#1F9A29"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/alata" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/margin1"
+            android:text="Savings"
+            android:textColor="#1F9A29"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/alata" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/margin1"
+            android:text="on this order"
+            android:textColor="#1F9A29"
+            android:textSize="17sp"
+            app:fontFamily="@font/alata" />
+
+    </LinearLayout>
+
+    <!--    add item worth-->
+    <LinearLayout
+        android:id="@+id/llAddItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlSavings"
+        android:layout_marginTop="@dimen/margin2"
+        android:background="#EBEFF1"
+        android:orientation="vertical"
+        android:padding="@dimen/margin1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin2"
+            android:layout_marginLeft="@dimen/margin2"
+            android:layout_marginTop="@dimen/margin2"
+            android:layout_marginEnd="@dimen/margin2"
+            android:layout_marginRight="@dimen/margin2"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="⚠ Don't Miss Out. Add item worth 2000 to get extra 1% off on all H and K items."
+                android:textColor="@color/dark"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horizontalRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    view products-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llAddItem"
+        android:layout_marginStart="@dimen/margin2"
+        android:layout_marginLeft="@dimen/margin2"
+        android:layout_marginTop="@dimen/margin2"
+        android:layout_marginEnd="@dimen/margin2"
+        android:layout_marginRight="@dimen/margin2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin1"
+            android:layout_marginLeft="@dimen/margin1"
+            android:layout_marginTop="@dimen/margin1"
+            android:layout_marginEnd="@dimen/margin1"
+            android:layout_marginRight="@dimen/margin1"
+            android:background="@drawable/bg_order"
+            android:orientation="vertical"
+            android:padding="@dimen/margin1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin3"
+                android:layout_marginLeft="@dimen/margin3"
+                android:layout_marginEnd="@dimen/margin2"
+                android:layout_marginRight="@dimen/margin2"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+                    android:text="Add more products in cart worth ₹2000.76 to avail 10.00% off."
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="View Products"
+                    android:textColor="#FF0900"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin3"
+                android:layout_marginTop="@dimen/margin3"
+                android:layout_marginEnd="@dimen/margin3"
+                android:layout_marginBottom="@dimen/margin3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/margin2"
+                    android:src="@drawable/img" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/margin2"
+                    android:layout_marginRight="@dimen/margin2"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:maxLines="1"
+                        android:text="Dubblin Boom 900 Stainless Steel Vacuum Insulated Water"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvBizz07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="7dp"
+                                android:maxLines="1"
+                                android:text="Bizz07 + 2%"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tvRupee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_toRightOf="@id/tvBizz07"
+                                android:gravity="bottom"
+                                android:maxLines="1"
+                                android:text="₹"
+                                android:textColor="#1F9A29"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tv1999"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_toRightOf="@id/tvRupee"
+                                android:maxLines="1"
+                                android:text="1999"
+                                android:textColor="#1F9A29"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_toRightOf="@id/tv1999"
+                                android:maxLines="1"
+                                android:text="off"
+                                android:textColor="#1F9A29"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:gravity="bottom"
+                            android:maxLines="1"
+                            android:text="₹721.0"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvDiscountPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="bottom"
+                            android:layout_marginEnd="10dp"
+                            android:text="₹199.0"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_toEndOf="@+id/tvDiscountPrice"
+                            android:text="₹169.0"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_favourite" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_delete" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--   view price details-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom_card"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin2"
+            android:layout_marginLeft="@dimen/margin2"
+            android:layout_marginTop="@dimen/margin3"
+            android:layout_marginEnd="@dimen/margin2"
+            android:layout_marginRight="@dimen/margin2"
+            android:background="@drawable/bg_redeem"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignLeft="@+id/toolBar"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_bizz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin2"
+                android:layout_marginEnd="@dimen/margin2"
+                android:gravity="center"
+                android:text="Redeem 50 Bizz coins on this order"
+                android:textColor="#FC716B"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignLeft="@+id/toolBar"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_bizz" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin5"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin1"
+            android:layout_marginEnd="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rupee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="2dp"
+                android:gravity="bottom"
+                android:text="₹"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/rupee"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="4012.00"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View price details"
+                    android:textColor="#2B82FF"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_proceed"
+                android:text="Proceed"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
