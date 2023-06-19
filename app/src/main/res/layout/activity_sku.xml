@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SkuActivity">
+
+    <!--    Toolbar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding2"
+            android:paddingBottom="@dimen/padding2"
+            android:layout_marginEnd="@dimen/margin2"
+            android:layout_marginRight="@dimen/margin2">
+
+            <ImageView
+                android:id="@+id/ivBack3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/margin2"
+                android:layout_marginRight="@dimen/margin2"
+                android:src="@drawable/ic_back" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/ivBizz"
+                android:src="@drawable/ic_search" />
+
+            <ImageView
+                android:id="@+id/ivBizz"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin2"
+                android:layout_toStartOf="@id/ivCart"
+                android:src="@drawable/bizz" />
+
+            <ImageView
+                android:id="@+id/ivCart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin2"
+                android:src="@drawable/ic_cart" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--    Location-->
+    <RelativeLayout
+        android:id="@+id/rlLocations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="#D2F0F3"
+        android:paddingTop="@dimen/padding1"
+        android:paddingBottom="@dimen/padding1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin3"
+            android:layout_marginEnd="@dimen/margin3">
+
+            <ImageView
+                android:id="@+id/tvLocation"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/margin2"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvLocation"
+                android:fontFamily="@font/inter_medium"
+                android:text="Deliver to Gurgaon 122001"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/inter_medium"
+                android:text="Change"
+                android:textColor="#005678"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--   Scroll SKU Details-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/llButtons"
+        android:layout_below="@+id/rlLocations">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rlSkuImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin2"
+                android:background="@drawable/bg_sku_image">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/imgViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_below="@+id/rlLocations"
+                    android:layout_centerInParent="true" />
+
+                <ImageView
+                    android:id="@+id/ivFavourite"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:layout_marginEnd="@dimen/margin2"
+                    android:layout_marginRight="@dimen/margin2"
+                    android:src="@drawable/ic_favourite" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/ivFavourite"
+                    android:layout_alignStart="@id/ivFavourite"
+                    android:layout_alignEnd="@id/ivFavourite"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/ic_download" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlSkuImage"
+                android:layout_marginStart="@dimen/margin3"
+                android:layout_marginLeft="@dimen/margin3"
+                android:layout_marginEnd="@dimen/margin3"
+                android:layout_marginRight="@dimen/margin3"
+                android:layout_marginBottom="@dimen/margin2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:paddingTop="3dp"
+                    android:text="Prestige Popular Virgin Aluminium Precision Weight Valve Pressure Cooker, 3 L (Silver)"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Cooker - Pack of 1"
+                    android:textColor="#23819F"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="₹450"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="₹385"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin1"
+                    android:fontFamily="@font/inter"
+                    android:text="MRP ₹500"
+                    android:textSize="14sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/couponRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/rlCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/tvOrderQuantity"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/bg_counter"
+                        android:fontFamily="@font/inter_medium"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/counterDecrease"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_alignStart="@id/tvOrderQuantity"
+                        android:layout_alignTop="@id/tvOrderQuantity"
+                        android:layout_alignBottom="@id/tvOrderQuantity"
+                        android:src="@drawable/minus" />
+
+                    <ImageView
+                        android:id="@+id/counterIncrease"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_alignTop="@id/tvOrderQuantity"
+                        android:layout_alignEnd="@id/tvOrderQuantity"
+                        android:layout_alignBottom="@id/tvOrderQuantity"
+                        android:src="@drawable/add" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlCounter"
+                    android:layout_marginBottom="@dimen/margin2"
+                    android:fontFamily="@font/inter"
+                    android:text="Tap here  to manually increase"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin2"
+                    android:fontFamily="@font/alata"
+                    android:text="Specifications"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin1"
+                    android:fontFamily="@font/alata"
+                    android:text="Descriptions"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="Discover the different layers of notes and ingredients that make up the beautiful scent in LUX Soft Touch Indulge in a sensorial experience with breakthrough Floral Beauty Oil that gives you a fragrance bloom two times better than real flowers. bloom two times better than real flowers."
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!--    Share Now-->
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="@dimen/margin4"
+        android:padding="@dimen/padding3"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareNow"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/margin2"
+            android:layout_weight="1"
+            android:background="@drawable/btn_share"
+            android:elevation="15dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Share Now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddToCart2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/margin2"
+            android:layout_weight="1"
+            android:background="@drawable/btn_addtocart"
+            android:elevation="15dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Add to Cart"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

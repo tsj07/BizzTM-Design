@@ -1,6 +1,5 @@
-package com.example.bizztmdesign;
+package com.example.bizztmdesign.adaptors;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.example.bizztmdesign.R;
 
 public class HorizontalRvAdapter extends RecyclerView.Adapter<HorizontalRvAdapter.HorizontalRvHolder> {
 
@@ -52,7 +51,6 @@ public class HorizontalRvAdapter extends RecyclerView.Adapter<HorizontalRvAdapte
 
         int i = image[position];
         holder.productImage.setImageResource(i);
-
     }
 
     @Override

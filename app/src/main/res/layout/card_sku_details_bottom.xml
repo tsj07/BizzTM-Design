@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin3"
+        android:layout_marginLeft="@dimen/margin3"
+        android:layout_marginTop="@dimen/margin1"
+        android:layout_marginEnd="@dimen/margin3"
+        android:layout_marginRight="@dimen/margin3"
+        android:layout_marginBottom="@dimen/margin1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="end"
+                android:layout_marginBottom="@dimen/margin1"
+                android:src="@drawable/close" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginBottom="@dimen/margin2"
+                android:background="@drawable/bg_card_image"
+                android:padding="@dimen/padding2"
+                android:src="@drawable/img_6" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/inter_medium"
+                android:paddingTop="3dp"
+                android:text="Prestige Popular Virgin Aluminium Precision Weight Valve Pressure Cooker, 3 L (Silver)"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="Cooker - Pack of 1"
+                android:textColor="#23819F"
+                android:textSize="13sp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="₹450"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="₹385"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin1"
+                android:fontFamily="@font/inter"
+                android:text="MRP ₹500"
+                android:textSize="12sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cardCouponRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/rlCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:id="@+id/tvCardCounter"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_counter"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cardCounterDecrease"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_alignStart="@id/tvCardCounter"
+                    android:layout_alignTop="@id/tvCardCounter"
+                    android:layout_alignBottom="@id/tvCardCounter"
+                    android:src="@drawable/minus" />
+
+                <ImageView
+                    android:id="@+id/cardCounterIncrease"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_alignTop="@id/tvCardCounter"
+                    android:layout_alignEnd="@id/tvCardCounter"
+                    android:layout_alignBottom="@id/tvCardCounter"
+                    android:src="@drawable/add" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlCounter"
+                android:fontFamily="@font/inter"
+                android:text="Tap here to manually increase"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin3"
+                android:layout_marginBottom="@dimen/margin3">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cardBtnAddToCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_addtocart"
+                    android:elevation="15dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Add to Cart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin2"
+    android:layout_marginLeft="@dimen/margin2"
+    android:layout_marginTop="@dimen/margin2"
+    android:layout_marginEnd="@dimen/margin2"
+    android:layout_marginRight="@dimen/margin2"
+    android:background="@drawable/bg_sku">
+
+    <ImageView
+        android:id="@+id/skuImage"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/parentLayout"
+        android:layout_alignBottom="@+id/parentLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_product_image"
+        android:padding="2dp"
+        android:src="@drawable/img_6" />
+
+    <LinearLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/skuImage"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/padding2"
+        android:paddingTop="@dimen/padding2"
+        android:paddingEnd="@dimen/padding2"
+        android:paddingBottom="@dimen/padding2">
+
+        <!--        SKU information-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/skuName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:maxLines="2"
+                    android:text="Prestige Svachh Deluxe Alpha 2.0 Litre Sss Steel Outer Svachh Deluxe Alpha 2.0 Litre Sss Steel Outer"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Pack of 1"
+                    android:textColor="#23819F"
+                    android:textSize="12dp"
+                    android:textStyle="italic" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/skuOriginalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:fontFamily="@font/inter"
+                        android:text="₹196"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/skuDiscountedPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="₹114"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/skuMrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter"
+                    android:text="MRP ₹300"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="7dp"
+                android:layout_toRightOf="@id/ll2"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivLike"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_favourite" />
+
+                <ImageView
+                    android:id="@+id/ivDownload"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_below="@id/ivLike"
+                    android:src="@drawable/ic_download" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--        Coupon Design-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin2"
+            android:background="@drawable/bg_coupon"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/ivBestDeal"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin1"
+                android:src="@drawable/bizz" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvBuyAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:paddingTop="1dp"
+                    android:text="Buy at ₹9000"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvWithOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBuyAt"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/inter"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:text="With OFFER10 + "
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvExtra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tvWithOffer"
+                    android:layout_alignBottom="@id/tvWithOffer"
+                    android:layout_toRightOf="@id/tvWithOffer"
+                    android:background="@drawable/bg_coupon_extra"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="center"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:text="4.2% Extra"
+                    android:textColor="#024864"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/tvCartAbove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvWithOffer"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/inter"
+                    android:paddingBottom="1dp"
+                    android:text="CART ABOVE ₹49,999"
+                    android:textColor="#23819F"
+                    android:textSize="8dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAllDeals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tvCartAbove"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin1"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:paddingBottom="1dp"
+                    android:text="All Deals"
+                    android:textColor="#FB413A"
+                    android:textSize="9dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--        Text View-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin2"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/star" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAddThisProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_medium"
+                android:maxLines="2"
+                android:text="Add this product and get up to 2% extra off on all H and K items. Know more... "
+                android:textColor="#9D0101"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!--        Share Button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnShare"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/margin2"
+                android:layout_weight="1"
+                android:background="@drawable/btn_share"
+                android:elevation="10dp"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:text="Share"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddToCart"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_addtocart"
+                android:elevation="10dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Add to Cart"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

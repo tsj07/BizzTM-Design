@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/margin2"
+    android:layout_marginEnd="@dimen/margin2"
+    android:layout_marginBottom="@dimen/margin2"
+    android:background="@drawable/bg_coupon"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/cBestDeal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin2"
+        android:layout_marginEnd="@dimen/margin2"
+        android:src="@drawable/bizz" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:paddingEnd="@dimen/padding1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cBuyAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/inter_medium"
+            android:text="Buy at ₹9000"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/cWithOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cBuyAt"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/inter"
+            android:text="With OFFER10 + "
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/cWithOffer"
+            android:layout_alignBottom="@id/cWithOffer"
+            android:layout_toRightOf="@id/cWithOffer"
+            android:background="@drawable/bg_coupon_extra"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="4.2% Extra"
+            android:textColor="#024864"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/cCartAbove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cWithOffer"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/inter"
+            android:text="CART ABOVE ₹49,999"
+            android:textColor="#23819F"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cAllDeals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/cCartAbove"
+            android:layout_alignEnd="@id/cExtra"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="All Deals"
+            android:textColor="#FB413A"
+            android:textSize="11dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>
